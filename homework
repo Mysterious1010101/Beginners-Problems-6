@@ -1,0 +1,42 @@
+Is it a triangle
+def triangle(a, b, c):
+    sides = [a, b, c]
+    if sides[0] + sides[1] > sides[2]:
+        return True
+    else:
+        return False
+
+side1 = int(input("enter the first side length: "))
+side2 = int(input("enter the second side length: "))
+side3 = int(input("enter the third side length: "))
+
+if triangle(side1, side2, side3):
+    print("It's a triangle!")
+else:
+    print("It's not a triangle.")
+
+Greetings!
+def greet(person, time):
+    if 0 <= time <= 12:
+        print("Good morning,", person)
+    elif 13 <= time <= 17:
+        print("Good afternoon,", person)
+    elif 18 <= time <= 23:
+        print("Good evening,", person)
+
+person = input("What's your name: ")
+time = int(input("What time is it (24h time): "))
+greet(person, time)
+
+Even numbers
+def getEven(numbers):
+    even = []
+    for num in numbers:
+        if num % 2 == 0:
+            even.append(num)
+    return even
+integers = []
+for i in range(0,5):
+    ans = int(input("Enter number: "))
+    integers.append(ans)
+print("Even numbers in the list:", getEven(integers))
